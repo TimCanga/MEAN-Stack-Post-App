@@ -1,0 +1,8 @@
+{
+  "env": {
+    "MONGO_ATLAS_CLUSTER": "node-angular",
+    "MONGO_ATLAS_UN": "sa",
+    "MONGO_ATLAS_PW": "sa.",
+    "JWT_KEY": "xxx"
+  }
+}

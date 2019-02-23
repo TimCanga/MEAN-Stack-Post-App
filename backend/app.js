@@ -8,7 +8,15 @@ const userRoutes = require("./routes/user");
 
 const app = express();
 
-mongoose.connect('mongodb+srv://sa:sa.@cluster0-cypl5.mongodb.net/node-angular', { useNewUrlParser: true} )
+console.log(process.env.MONGO_ATLAS_PW);
+
+mongoose.connect("mongodb+srv://" +
+  process.env.MONGO_ATLAS_UN +
+  ":" +
+    process.env.MONGO_ATLAS_PW +
+      "@cluster0-cypl5.mongodb.net/" +
+        process.env.MONGO_ATLAS_CLUSTER,
+          { useNewUrlParser: true} )
   .then(() => {
     console.log("Connected to database!");
   })
